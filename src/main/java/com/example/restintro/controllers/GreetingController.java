@@ -27,7 +27,7 @@ public class GreetingController {
 
     @PostMapping("/addGreeting")
     public ResponseEntity<Set<Greeting>> addGreeting(Greeting greeting){ // returns data as JSON
-        System.out.println("received addGreeting " + greeting.getMessage());
+        System.out.println("Received addGreeting " + greeting.getMessage());
         greetingService.save(greeting);
         return new ResponseEntity<>(greetingService.findAll(), HttpStatus.OK);
     }

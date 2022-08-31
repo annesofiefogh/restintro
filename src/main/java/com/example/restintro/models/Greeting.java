@@ -20,5 +20,6 @@ public class Greeting {
     @Column
     private String message2 = "2. Hello again";
 
-    @Column String message3 = "3. Hello again, again";
+    @Column
+    private String message3 = "3. Hello again, again";
 }

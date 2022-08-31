@@ -8,10 +8,13 @@ import javax.persistence.*;
 @Entity
 @Getter
 @Setter
-@Table(name = "User")
 public class User {
 
-    protected User (){}
+    protected User(){}
+
+    protected User (String name){
+        this.name = name;
+    }
 
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
