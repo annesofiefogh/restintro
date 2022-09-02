@@ -2,7 +2,6 @@ package com.example.restintro.services;
 
 import com.example.restintro.models.Greeting;
 import com.example.restintro.repositories.GreetingRepository;
-import com.example.restintro.repositories.IGreeting;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
@@ -10,9 +9,9 @@ import java.util.Optional;
 import java.util.Set;
 
 @Service
-public class GreetingService implements IGreeting {
+public class GreetingService implements IGreetingService {
 
-    private GreetingRepository repo;
+    private GreetingRepository repo; //Hibernate makes the object based on the interface
 
     public GreetingService(GreetingRepository repo) {
         this.repo = repo;

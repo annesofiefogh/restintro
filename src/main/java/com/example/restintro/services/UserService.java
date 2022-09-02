@@ -1,7 +1,6 @@
 package com.example.restintro.services;
 
 import com.example.restintro.models.User;
-import com.example.restintro.repositories.IUser;
 import com.example.restintro.repositories.UserRepository;
 import org.springframework.stereotype.Service;
 
@@ -10,11 +9,11 @@ import java.util.Optional;
 import java.util.Set;
 
 @Service
-public class UserService implements IUser {
+public class UserService implements IUserService {
 
     private UserRepository userRepo;
 
-    public UserService (UserRepository userRepo){
+    public UserService(UserRepository userRepo){
         this.userRepo = userRepo;
     }
 
